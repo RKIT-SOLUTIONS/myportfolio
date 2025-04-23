@@ -12,15 +12,27 @@ function IconsPalate() {
     'https://img.icons8.com/?size=100&id=13679&format=png&color=000000',
   ];
   return (
-    <div className='flex space-x-5 '>
-      {logos.map((image) => (
-        <>
-          <img
-            src={image}
-            className='size-20'
-          />
-        </>
-      ))}
+    <div className='overflow-hidden whitespace-nowrap max-w-screen-md pt-6 '>
+      <div className='flex space-x-5 animate-marquee'>
+        {logos.map((image, key) => (
+          <>
+            <img
+              key={key}
+              src={image}
+              className='size-20 inline-block'
+            />
+          </>
+        ))}
+        {logos.map((image, key) => (
+          <>
+            <img
+              key={key}
+              src={image}
+              className='size-20 inline-block'
+            />
+          </>
+        ))}
+      </div>
     </div>
   );
 }
