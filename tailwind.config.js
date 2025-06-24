@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         'press-start': ['"Press Start 2P"', 'cursive'],
         Tektur: ['Tektur', 'sans-serif'],
+        comfortaa: ['Comfortaa', 'sans-serif'],
       },
       boxShadow: {
         flame:
