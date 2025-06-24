@@ -35,7 +35,7 @@ function Services() {
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 py-9 px-3 gap-4'>
       {services?.map((data, index) => (
         <div
-          className='px-4 py-2 bg-white border border-b-[#3debf4] border-b-4 border-gray-200 rounded-lg shadow-2xl cursor-pointer dark:bg-gray-800 dark:border-gray-700 hover:shadow-sm hover:shadow-teal-200 duration-700'
+          className='px-4 py-2  border-b-[#3debf4] border-b-4 border-gray-200 rounded-lg shadow-2xl cursor-pointer dark:bg-gray-800 dark:border-gray-700 hover:shadow-sm hover:shadow-teal-200 duration-700'
           key={index}
         >
           <div className='text-3xl'>{data?.icon}</div>

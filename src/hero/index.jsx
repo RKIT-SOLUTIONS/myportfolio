@@ -10,7 +10,7 @@ function Hero() {
         <span className='font-bold text-[#4ebbe6] text-6xl lg:text-5xl'>
           Hello
         </span>
-        <span className='font-bold'>
+        <span className='font-bold cursor-pointer text-gray-200 hover:text-emerald-100'>
           Im Ruck<span className='hidden xl:inline-block'>shanth</span>
         </span>
         <span className='text-5xl lg:text-6xl font-semibold text-[#5eead8] h-32'>
@@ -21,9 +21,10 @@ function Hero() {
         </span>
         <IconsPalate />
       </div>
-      <div className='flex justify-center mt-10 rounded-full animate-bounceSmall'>
+
+      <div className=' relative flex justify-center mt-10 rounded-full animate-bounceSmall'>
         <img
-          className='size-80 lg:h-[28rem] lg:w-[28rem] rounded-full shadow-flame '
+          className='size-80 lg:h-[28rem] lg:w-[28rem] rounded-full  shadow-flame '
           src={Ruck}
         />
       </div>
