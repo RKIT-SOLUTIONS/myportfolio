@@ -35,9 +35,14 @@ function Navbar() {
           {Toggle ? <IoMdClose /> : <IoMenuOutline />}
         </button>
         <div className='hidden lg:block'>
-          <button className=' h-auto w-auto p-4 rounded rounded-se-2xl font-bold rounded-bl-2xl bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 ...'>
-            DownloadResume
-          </button>
+          <a
+            href='/Ruckshanth CV.pdf'
+            download='Ruckshanth CV.pdf'
+          >
+            <button className=' h-auto w-auto p-4 rounded rounded-se-2xl font-bold rounded-bl-2xl bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 ...'>
+              DownloadResume
+            </button>
+          </a>
         </div>
       </div>
       {Toggle && (

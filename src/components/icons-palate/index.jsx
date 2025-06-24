@@ -2,33 +2,21 @@ import React from 'react';
 
 function IconsPalate() {
   const logos = [
-    'https://img.icons8.com/?size=100&id=20909&format=png&color=000000',
-    'https://img.icons8.com/?size=100&id=7gdY5qNXaKC0&format=png&color=000000',
-    'https://img.icons8.com/?size=100&id=4PiNHtUJVbLs&format=png&color=000000',
-    'https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=000000',
-    'https://img.icons8.com/?size=100&id=54087&format=png&color=000000',
-    'https://img.icons8.com/?size=100&id=108784&format=png&color=000000',
-    'https://img.icons8.com/?size=100&id=uJM6fQYqDaZK&format=png&color=000000',
-    'https://img.icons8.com/?size=100&id=13679&format=png&color=000000',
+    'https://img.icons8.com/?size=100&id=118467&format=png&color=000000',
+    'https://img.icons8.com/?size=100&id=60444&format=png&color=000000',
+    'https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=0000000',
+    'https://img.icons8.com/?size=100&id=RhYNENh5cxlS&format=png&color=000000',
+    'https://img.icons8.com/?size=100&id=Vnz4A9DdDXEL&format=png&color=000000',
   ];
   return (
-    <div className='overflow-hidden whitespace-nowrap max-w-screen-md pt-6 '>
-      <div className='flex space-x-5 animate-marquee'>
+    <div className=' whitespace-nowrap max-w-screen-md pt-6 '>
+      <div className='flex my-7 space-x-6  justify-center cursor-pointer'>
         {logos.map((image, key) => (
           <>
             <img
               key={key}
               src={image}
-              className='size-20 inline-block'
-            />
-          </>
-        ))}
-        {logos.map((image, key) => (
-          <>
-            <img
-              key={key}
-              src={image}
-              className='size-20 inline-block'
+              className='size-12 inline-block rounded-full bg-[#4db9e7] p-1 z-10 hover:bg-gradient-to-r from-pink-500 hover:to-orange-500 ...  '
             />
           </>
         ))}
