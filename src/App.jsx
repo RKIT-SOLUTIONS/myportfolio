@@ -7,7 +7,7 @@ import Experiance from './experiance';
 function App() {
   return (
     <>
-      <div className='px-3'>
+      <div>
         <div className='relative bg-gradient-to-r  from-black to-blue-950 h-full gap-y-12 overflow-hidden'>
           <div className='absolute bottom-10 left-0 size-96 bg-blue-500 rounded-full blur-3xl opacity-50'></div>
 
