@@ -1,185 +1,122 @@
-import React from 'react';
+import git from '../assets/images/git.png';
+import azure from '../assets/images/azure.png';
 
 function index() {
-    return (
-      <div className='px-2'>
-        <div class='relative  overflow-hidden bg-gray-900 pt-16 pb-32 space-y-24'>
-          <div class='relative'>
-            <div class='lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8 '>
-              <div class='mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 '>
-                <div>
-                  <div>
-                    <span class='flex h-12 w-12 items-center justify-center rounded-xl bg-pink-500'>
-                      <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        fill='none'
-                        viewBox='0 0 24 24'
-                        stroke-width='1.5'
-                        stroke='currentColor'
-                        aria-hidden='true'
-                        class='h-8 w-8 text-white'
-                      >
-                        <path
-                          stroke-linecap='round'
-                          stroke-linejoin='round'
-                          d='M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z'
-                        ></path>
-                      </svg>
-                    </span>
-                  </div>
+  const projects = [
+    {
+      image:
+        'https://images.unsplash.com/photo-1750365866509-8e1f1cac473e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8',
+      title: 'Socila-media Platform',
+      description:
+        'Full-stack marketplace with payment integration and admin dashboard',
+      badge: ['React', '.Net', 'Mysql'],
+      icons: [git, azure],
+      border: 'border-[#dd3f3f] ',
+    },
+    {
+      image:
+        'https://images.unsplash.com/photo-1750365866509-8e1f1cac473e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8',
+      title: 'Multi Tenant E-commerce Webapplication',
+      description:
+        'Full-stack marketplace with payment integration and admin dashboard',
+      badge: ['React', '.Net', 'Mysql'],
+      icons: [git, azure],
+      border: ' border-[#22c25c] ',
+    },
+    {
+      image:
+        'https://images.unsplash.com/photo-1750365866509-8e1f1cac473e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8',
+      title: 'E-commerce Platform',
+      description:
+        'Full-stack marketplace with payment integration and admin dashboard',
+      badge: ['React', 'Node'],
+      icons: [git, azure],
+      border: ' border-[#f13298] ',
+    },
+    {
+      image:
+        'https://images.unsplash.com/photo-1750365866509-8e1f1cac473e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8',
+      title: 'E-commerce Platform',
+      description:
+        'Full-stack marketplace with payment integration and admin dashboard',
+      badge: ['React', 'Node'],
+      icons: [git, azure],
+      border: ' border-[#dd3f3f] ',
+    },
+    {
+      image:
+        'https://images.unsplash.com/photo-1750365866509-8e1f1cac473e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8',
+      title: 'E-commerce Platform',
+      description:
+        'Full-stack marketplace with payment integration and admin dashboard',
+      badge: ['React', 'Node'],
+      icons: [git, azure],
+      border: ' border-[#22c25c] ',
+    },
+    {
+      image:
+        'https://images.unsplash.com/photo-1750365866509-8e1f1cac473e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8',
+      title: 'E-commerce Platform',
+      description:
+        'Full-stack marketplace with payment integration and admin dashboard',
+      badge: ['React', 'Node'],
+      icons: [git, azure],
+      border: ' border-[#f13298] ',
+    },
+  ];
+  return (
+    <section class='bg-black text-white mx-auto space-y-32 py-8 md:py-12 md:px-5 lg:py-20'>
+      <div class='mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center'>
+        <h2 class='font-bold text-3xl  sm:text-3xl md:text-4xl z-10'>
+          Featured Projects
+        </h2>
 
-                  <div class='mt-6'>
-                    <h2 class='text-3xl font-bold tracking-tight text-white'>
-                      Natural Language Processing (NLP):
-                    </h2>
-                    <p class='mt-4 text-lg text-gray-300'>
-                      The AI product utilizes advanced NLP algorithms to
-                      understand and interpret human language, enabling it to
-                      accurately process and analyze text-based inputs.
-                    </p>
-                    <div class='mt-6'>
-                      <a
-                        class='inline-flex rounded-lg bg-pink-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-pink-600 hover:bg-pink-700 hover:ring-pink-700'
-                        href='/login'
-                      >
-                        Learn More
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class='mt-12 sm:mt-16 lg:mt-0'>
-                <div class='-mr-48 pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0'>
-                  <img
-                    loading='lazy'
-                    width='647'
-                    height='486'
-                    class='w-full rounded-xl shadow-2xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none'
-                    src='https://images.unsplash.com/photo-1569144157591-c60f3f82f137'
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class='relative'>
-            <div class='lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8 '>
-              <div class='mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 lg:col-start-2'>
-                <div>
-                  <div>
-                    <span class='flex h-12 w-12 items-center justify-center rounded-xl bg-pink-500'>
-                      <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        fill='none'
-                        viewBox='0 0 24 24'
-                        stroke-width='1.5'
-                        stroke='currentColor'
-                        aria-hidden='true'
-                        class='h-8 w-8 text-white'
-                      >
-                        <path
-                          stroke-linecap='round'
-                          stroke-linejoin='round'
-                          d='M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z'
-                        ></path>
-                      </svg>
-                    </span>
-                  </div>
-                  <div class='mt-6'>
-                    <h2 class='text-3xl font-bold tracking-tight text-white'>
-                      Sentiment Analysis:
-                    </h2>
-                    <p class='mt-4 text-lg text-gray-300'>
-                      The product has built-in sentiment analysis capabilities,
-                      allowing it to determine the sentiment (positive,
-                      negative, or neutral) expressed in text or customer
-                      feedback.
-                    </p>
-                    <div class='mt-6'>
-                      <a
-                        class='inline-flex rounded-lg bg-pink-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-pink-600 hover:bg-pink-700 hover:ring-pink-700'
-                        href='/login'
-                      >
-                        Learn More
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class='mt-12 sm:mt-16 lg:mt-0'>
-                <div class='-ml-48 pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0'>
-                  <img
-                    alt='Inbox user interface'
-                    loading='lazy'
-                    width='647'
-                    height='486'
-                    class='w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none'
-                    src='https://images.unsplash.com/photo-1599134842279-fe807d23316e'
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class='relative'>
-            <div class='lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8 '>
-              <div class='mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 '>
-                <div>
-                  <div>
-                    <span class='flex h-12 w-12 items-center justify-center rounded-xl bg-pink-500'>
-                      <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        fill='none'
-                        viewBox='0 0 24 24'
-                        stroke-width='1.5'
-                        stroke='currentColor'
-                        aria-hidden='true'
-                        class='h-8 w-8 text-white'
-                      >
-                        <path
-                          stroke-linecap='round'
-                          stroke-linejoin='round'
-                          d='M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z'
-                        ></path>
-                      </svg>
-                    </span>
-                  </div>
-                  <div class='mt-6'>
-                    <h2 class='text-3xl font-bold tracking-tight text-white'>
-                      Natural Language Generation (NLG):
-                    </h2>
-                    <p class='mt-4 text-lg text-gray-300'>
-                      The AI product can generate human-like written content,
-                      summaries, or reports based on structured data or analysis
-                      results.
-                    </p>
-                    <div class='mt-6'>
-                      <a
-                        class='inline-flex rounded-lg bg-pink-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-pink-600 hover:bg-pink-700 hover:ring-pink-700'
-                        href='/login'
-                      >
-                        Learn More
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class='mt-12 sm:mt-16 lg:mt-0'>
-                <div class='-mr-48 pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0'>
-                  <img
-                    loading='lazy'
-                    width='646'
-                    height='485'
-                    class='w-full rounded-xl shadow-2xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none'
-                    src='https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e'
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p class='max-w-[85%] text-zinc-400 sm:text-lg z-10'>
+          A showcase of my recent development work
+        </p>
       </div>
-    );
+
+      <div className='mx-auto grid justify-items-center  lg:gap-x-8 gap-y-10  md:grid-cols-2 md:max-w-[70rem] lg:grid-cols-3 '>
+        {projects?.map((data, id) => (
+          <div
+            className='flex flex-col gap-y-2'
+            key={id}
+          >
+            <div className='h-56 w-80 z-10'>
+              <img
+                src={data?.image}
+                className='rounded-tr-xl rounded-tl-xl'
+                alt='image'
+              />
+            </div>
+            <div className='font-bold text-md'>{data?.title}</div>
+            <div className='text-sm text-zinc-400 w-80'>
+              {data?.description}
+            </div>
+            <div className='flex flex-row gap-x-3'>
+              {data?.badge?.map((badge) => (
+                <div
+                  className={`flex justify-center items-center border
+border-opacity-35 ${data.border}  rounded-2xl text-lg font-semibold w-24 h-8`}
+                >
+                  {badge}
+                </div>
+              ))}
+            </div>
+
+            <div className='flex gap-4'>
+              {data?.icons.map((icons) => (
+                <img
+                  src={icons}
+                  className='w-8 h-8'
+                />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 export default index;

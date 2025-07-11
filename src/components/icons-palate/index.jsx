@@ -9,14 +9,14 @@ function IconsPalate() {
     'https://img.icons8.com/?size=100&id=Vnz4A9DdDXEL&format=png&color=000000',
   ];
   return (
-    <div className=' whitespace-nowrap max-w-screen-md pt-6 '>
-      <div className='flex my-7 space-x-6  justify-center cursor-pointer'>
+    <div className=' whitespace-nowrap max-w-screen-md '>
+      <div className='flex my-3 space-x-6  justify-center cursor-pointer'>
         {logos.map((image, key) => (
           <>
             <img
               key={key}
               src={image}
-              className='size-12 inline-block rounded-full bg-[#4db9e7] p-1 z-10 hover:bg-gradient-to-r from-pink-500 hover:to-orange-500 ...  '
+              className='size-12 inline-block rounded-full bg-[#a1a1aa] p-1 z-10 hover:bg-gradient-to-r from-pink-500 hover:to-orange-500 ...  '
             />
           </>
         ))}

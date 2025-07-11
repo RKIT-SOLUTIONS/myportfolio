@@ -4,85 +4,62 @@ import { FaReact } from 'react-icons/fa6';
 function index() {
   const experiances = [
     {
-      icon: 'https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=000000',
-      title: 'React',
-      persentage: 80,
+      icon: 'https://img.icons8.com/?size=100&id=11260&format=png&color=000000',
+      title: 'Frontend Development',
+      border: 'from-black to-red-500',
       description:
-        'A JavaScript library for building dynamic UIs using reusable components.',
+        'Expert in React, Vue.js, and modern CSS frameworks for creating responsive user interfaces',
     },
     {
-      icon: 'https://img.icons8.com/?size=100&id=zfHRZ6i1Wg0U&format=png&color=000000',
-      title: 'Figma',
-      persentage: 80,
+      icon: 'https://img.icons8.com/?size=100&id=9936&format=png&color=000000',
+      title: 'Backend Development',
+      border: 'from-black to-green-500',
       description:
-        'A collaborative, web-based design tool for creating UI/UX prototypes in real time.',
+        'Expert in Node.js, Express, and modern database systems like MongoDB and MySQL for building scalable and secure backend services.',
     },
     {
-      icon: 'https://img.icons8.com/?size=100&id=4PiNHtUJVbLs&format=png&color=000000',
-      title: 'Tailwind CSS',
-      persentage:'full',
+      icon: 'https://img.icons8.com/?size=100&id=2897&format=png&color=000000',
+      title: 'Api Integrations',
+      border: 'from-black to-[#f6339a]',
       description:
-        'A utility-first CSS framework for fast and customizable UI design.',
-    },
-    {
-      icon: 'https://img.icons8.com/?size=100&id=54087&format=png&color=000000',
-      title: 'Node JS',
-      persentage: 52,
-      description:
-        'A JavaScript runtime for building scalable server-side applications.',
-    },
-    {
-      icon: 'https://img.icons8.com/?size=100&id=9nLaR5KFGjN0&format=png&color=000000',
-      title: 'My SQL',
-      persentage: 72,
-      description:
-        'An open-source relational database system for managing structured application data.',
-    },
-    {
-      icon: 'https://img.icons8.com/?size=100&id=SDVmtZ6VBGXt&format=png&color=000000',
-      title: 'Express JS',
-      persentage: 48,
-      description:
-        'A lightweight Node.js framework for building APIs and web servers efficiently.',
+        'Skilled in RESTful API integrations, ensuring seamless communication between frontend and backend with swagger & postman',
     },
   ];
   return (
     <>
-      <section class=' mx-auto  space-y-6 py-8 md:py-12 lg:py-20'>
+      <section class='bg-black text-white mx-auto  space-y-32 py-8 md:py-12 lg:py-20'>
         <div class='mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center'>
-          <h2 class='font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl'>
-            Skills
-          </h2>
+          <h2 class='font-bold text-3xl  sm:text-3xl md:text-4xl'>About Me</h2>
 
-          <p class='max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7'>
-            The product can personalize user experiences by understanding
-            individual preferences and tailoring recommendations or content
-            based on user behavior and historical data.
+          <p class='max-w-[85%] text-zinc-400  sm:text-lg '>
+            Passionate software developer with 1+ years of experience building
+            scalable web applications
           </p>
         </div>
 
-        <div class='mx-auto grid justify-center gap-x-7 gap-y-6 sm:grid-cols-2 md:max-w-[70rem] md:grid-cols-3'>
+        <div class='mx-auto grid justify-items-center gap-x-12 gap-y-6 grid-cols-1 sm:grid-cols-2 md:max-w-[70rem] md:grid-cols-3 px-5 md:px-2'>
           {experiances.map((data, key) => (
             <div
-              class='relative overflow-hidden cursor-pointer  border-gray-200 rounded-lg shadow-2xl hover:shadow-sm hover:shadow-teal-200 duration-700 py-2 px-4 '
+              className={`relative p-[0.4px] rounded-xl bg-gradient-to-t ${data.border}`}
               key={key}
             >
-              <div class='flex gap-y-4 h-[180px] flex-col justify-between rounded-md'>
-                <img
-                  src={data?.icon}
-                  className='size-16'
-                />
+              <div className='bg-black  rounded-xl shadow-2xl overflow-hidden cursor-pointer py-4 px-4'>
+                <div className='flex gap-y-4 h-auto flex-col justify-between rounded-md'>
+                  <div className='flex justify-center items-center w-16 h-16 bg-gray-300 rounded-md '>
+                    <img
+                      src={data?.icon}
+                      className='w-12 h-12'
+                    />
+                  </div>
 
-                <div class='space-y-2 '>
-                  <h3 class='font-bold text-md'>{data.title}</h3>
-                  <p class='text-[13px] text-zinc-400 font-comfortaa'>
-                    {data.description}
-                  </p>
+                  <div className='space-y-9'>
+                    <h3 className='font-bold text-md'>{data.title}</h3>
+                    <p className='text-[13px] text-zinc-400 font-comfortaa'>
+                      {data.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div
-                className={`absolute bottom-0 left-0  border border-b-[#3debf4] border-b-4 w-${data.persentage}`}
-              ></div>
             </div>
           ))}
         </div>
