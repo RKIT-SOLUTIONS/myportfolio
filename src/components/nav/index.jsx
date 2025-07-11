@@ -34,7 +34,7 @@ function Navbar() {
         </button>
         <div className='hidden lg:block'>
           <a
-            href='/Ruckshanth CV.pdf'
+            href='public/Ruckshanth CV.pdf'
             download='Ruckshanth CV.pdf'
           >
             <button className=' h-auto w-auto p-4 rounded rounded-ss-2xl font-bold rounded-br-2xl bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 ...'>
