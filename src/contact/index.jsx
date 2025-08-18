@@ -4,7 +4,7 @@ import { IoMail } from 'react-icons/io5';
 
 function index() {
   return (
-    <section className='bg-black text-white mx-auto space-y-16 py-8 md:py-12 lg:py-20 px-4'>
+    <section className='bg-black contact text-white mx-auto space-y-16 py-8 md:py-12 lg:py-20 px-4'>
       {/* Title */}
       <div className='mx-auto flex max-w-3xl flex-col items-center space-y-4 text-center'>
         <h2 className='font-bold text-3xl leading-tight sm:text-4xl md:text-5xl'>
@@ -62,7 +62,7 @@ function index() {
             placeholder='Message'
             name='message'
             rows='4'
-            className='rounded-md bg-black border border-white border-opacity-35 ring-1 ring-white px-3 opacity-60 resize-none'
+            className='rounded-md bg-black border border-white border-opacity-35 ring-1 ring-white px-3 py-2 opacity-60 resize-none'
           />
           <button
             type='submit'

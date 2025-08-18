@@ -19,7 +19,12 @@ function Hero() {
           </span>
           <span className='text-4xl md:text-5xl lg:text-6xl font-semibold w-full lg:w-auto h-20 bg-gradient-to-r from-pink-600 to-orange-500 text-transparent bg-clip-text'>
             <Typewriter
-              texts={['Software Developer', 'UI/UX Designer', 'Logo Creater']}
+              texts={[
+                'Software Developer',
+                'UI/UX Designer',
+                'Logo Creater',
+                'Graphics Designer',
+              ]}
               delay={100}
             ></Typewriter>
           </span>
@@ -41,7 +46,7 @@ function Hero() {
       </div>
       <div className={`md:hidden flex justify-center mt-10`}>
         <a
-          href='/Ruckshanth CV.pdf'
+          href='https://raw.githubusercontent.com/RKIT-SOLUTIONS/myportfolio/main/public/Ruckshanth%20CV.pdf'
           download='Ruckshanth CV.pdf'
         >
           <img

@@ -7,6 +7,9 @@ import Mongo from '../assets/images/mongo.png';
 import Express from '../assets/images/express.png';
 import Github from '../assets/images/github.png';
 import Typescript from '../assets/images/typescript.png';
+import Figma from '../assets/images/figma.png';
+import Nextjs from '../assets/images/nextjs.png';
+import Blender from '../assets/images/blender.png';
 
 function index() {
   const icons = [
@@ -43,7 +46,7 @@ function index() {
       alignment: 'md:mt-36',
     },
     {
-      icon: Typescript,
+      icon: Figma,
       alignment: 'md:mt-0',
     },
     {
@@ -51,11 +54,11 @@ function index() {
       alignment: 'md:mt-12',
     },
     {
-      icon: Express,
+      icon: Blender,
       alignment: 'md:mt-24',
     },
     {
-      icon: Github,
+      icon: Nextjs,
       alignment: 'md:mt-36',
     },
   ];
