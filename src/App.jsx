@@ -8,6 +8,7 @@ import defaltvetor from './assets/images/defaltvetor.svg';
 import vector_2 from './assets/images/vector_2.svg';
 import vector_3 from './assets/images/vector_3.svg';
 import vector_1 from './assets/images/vector_1.svg';
+// import vector_1 from './assets/images/vector_1.svg';
 
 function App() {
   return (
