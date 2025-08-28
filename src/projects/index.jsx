@@ -16,7 +16,6 @@ function index() {
     {
       image: EMY,
       title: 'Socila-media Platform',
-      href: 'https://emy.lk/',
       description: 'wonder full app for manage social connection in srilanka',
       badge: ['React', '.Net', 'Mysql'],
       icons: [git, azure],
@@ -24,7 +23,7 @@ function index() {
     },
     {
       image: MTM,
-      href: 'http://mtms1.speedhrm.com/',
+
       title: 'Multi Tenant E-commerce Webapplication',
       description:
         'Full-stack marketplace with payment integration and admin dashboard',
@@ -35,7 +34,7 @@ function index() {
     {
       image: CFC,
       title: 'Crazy fried chicken',
-      href: 'https://crazyfriedchicken.co.uk/',
+
       description: 'best food ordering website system in UK',
       badge: ['React', 'Node'],
       icons: [git, azure],
@@ -51,8 +50,8 @@ function index() {
     },
     {
       image: Aayush,
-      title: 'E-commerce Platform',
-      description: 'TNS Wholesale',
+      title: 'Aayush Website',
+      description: 'Pharmacy Website',
       badge: ['React', 'Node'],
       icons: [git, azure],
       border: ' border-[#22c25c] ',
