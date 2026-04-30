@@ -1,5 +1,4 @@
 import Ruck from '../assets/images/NewRK.png';
-import Mypic from '../assets/images/mypic.png';
 import IconsPalate from '../components/icons-palate';
 import Typewriter from '../components/typing-text';
 import { useScrollReveal } from '../hooks/useScrollReveal';
