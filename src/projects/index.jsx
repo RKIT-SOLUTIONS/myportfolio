@@ -3,140 +3,142 @@ import azure from '../assets/images/azure.png';
 import MTM from '../assets/images/mtm.png';
 import EMY from '../assets/images/emy.png';
 import CFC from '../assets/images/cfc.png';
-import RollingBarel from '../assets/images/The rolling barrel.png';
-// import Aayush from '../assets/images/Aayush QR.png';
-import Torentoblue from '../assets/images/torento blue.png';
-import mastermobile from '../assets/images/masterphone.png';
 import mission from '../assets/images/mission.png';
 import dashboard from '../assets/images/dashboard.png';
 import Aayush from '../assets/images/Aayush.png';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
-function index() {
+function Projects() {
+  const [titleRef, titleVisible] = useScrollReveal();
+  const [gridRef, gridVisible] = useScrollReveal({ threshold: 0.05 });
+
   const projects = [
     {
       image: EMY,
-      title: 'Socila-media Platform',
-      description: 'wonder full app for manage social connection in srilanka',
-      badge: ['React', '.Net', 'Mysql'],
+      title: 'Social Media Platform',
+      description: 'Wonderful app for managing social connections in Sri Lanka',
+      badge: ['React', '.Net', 'MySQL'],
       icons: [git, azure],
-      border: 'border-[#dd3f3f] ',
+      accent: '#ef4444',
     },
     {
       image: MTM,
-
-      title: 'Multi Tenant E-commerce Webapplication',
+      title: 'Multi Tenant E-commerce Web Application',
       description:
         'Full-stack marketplace with payment integration and admin dashboard',
-      badge: ['React', '.Net', 'Mysql'],
+      badge: ['React', '.Net', 'MySQL'],
       icons: [git, azure],
-      border: ' border-[#22c25c] ',
+      accent: '#22c55e',
     },
     {
       image: CFC,
-      title: 'Crazy fried chicken',
-
-      description: 'best food ordering website system in UK',
+      title: 'Crazy Fried Chicken',
+      description: 'Best food ordering website system in UK',
       badge: ['React', 'Node'],
       icons: [git, azure],
-      border: ' border-[#f13298] ',
+      accent: '#ec4899',
     },
     {
       image: mission,
       title: 'Mission Website',
-      description: 'Agape Mission',
+      description: 'Agape Mission community platform',
       badge: ['React', 'Node'],
       icons: [git],
-      border: ' border-[#dd3f3f] ',
+      accent: '#f59e0b',
     },
     {
       image: Aayush,
       title: 'Aayush Website',
-      description: 'Pharmacy Website',
+      description: 'Modern pharmacy e-commerce website',
       badge: ['React', 'Node'],
       icons: [git, azure],
-      border: ' border-[#22c25c] ',
+      accent: '#14b8a6',
     },
     {
       image: dashboard,
-      title: ' Admin Dashboard',
-      description: 'admin dashboard',
+      title: 'Admin Dashboard',
+      description: 'Analytics and management admin dashboard',
       badge: ['React', 'Node'],
       icons: [git, azure],
-      border: ' border-[#f13298] ',
+      accent: '#8b5cf6',
     },
   ];
 
-  const Graphics = [
-    {
-      image: RollingBarel,
-    },
-    {
-      image: Torentoblue,
-    },
-    {
-      image: mastermobile,
-    },
-    {
-      image: Aayush,
-    },
-  ];
   return (
-    <>
-      <section class='bg-black text-white mx-auto space-y-32 py-8 md:py-12 md:px-5 lg:py-20'>
-        <div class='mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center'>
-          <h2 class='font-bold text-3xl  sm:text-3xl md:text-4xl z-10'>
-            Featured Projects
-          </h2>
+    <section className='py-20 md:py-28 lg:py-36 px-6 md:px-16'>
+      <div
+        ref={titleRef}
+        className={`mx-auto flex max-w-3xl flex-col items-center space-y-4 text-center mb-16 reveal-fade-up ${titleVisible ? 'visible' : ''}`}
+      >
+        <span className='text-teal-400 text-sm uppercase tracking-[0.3em] font-semibold'>Portfolio</span>
+        <h2 className='font-bold text-3xl sm:text-4xl md:text-5xl'>
+          Featured Projects
+        </h2>
+        <p className='max-w-[85%] text-zinc-400 sm:text-lg'>
+          A showcase of my recent development work
+        </p>
+      </div>
 
-          <p class='max-w-[85%] text-zinc-400 sm:text-lg z-10'>
-            A showcase of my recent development work
-          </p>
-        </div>
+      <div
+        ref={gridRef}
+        className='mx-auto grid justify-items-center gap-8 md:grid-cols-2 md:max-w-6xl lg:grid-cols-3'
+      >
+        {projects?.map((data, id) => (
+          <a
+            href={data.href}
+            key={id}
+            className={`group h-full w-full reveal-fade-up stagger-${(id % 3) + 1} ${gridVisible ? 'visible' : ''}`}
+          >
+            <div className='glass-card rounded-2xl overflow-hidden h-full flex flex-col transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_25px_60px_rgba(0,0,0,0.4)]'>
+              {/* Image */}
+              <div className='relative overflow-hidden'>
+                <img
+                  src={data?.image}
+                  className='h-52 w-full object-cover transition-transform duration-700 group-hover:scale-110'
+                  alt={data?.title}
+                />
+                <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
+              </div>
 
-        <div className='mx-auto grid justify-items-center  lg:gap-x-8 gap-y-14  md:grid-cols-2 md:max-w-[70rem] lg:grid-cols-3 '>
-          {projects?.map((data, id) => (
-            <a href={data.href}>
-              <div
-                className='flex flex-col gap-y-2 '
-                key={id}
-              >
-                <div className=' z-10'>
-                  <img
-                    src={data?.image}
-                    className='rounded-tr-xl rounded-tl-xl h-56 w-80'
-                    alt='image'
-                  />
-                </div>
-                <div className='font-bold text-md'>{data?.title}</div>
-                <div className='text-sm text-zinc-400 w-80'>
+              {/* Content */}
+              <div className='flex flex-col flex-grow p-5 gap-y-3'>
+                <h3 className='font-bold text-lg text-white group-hover:text-teal-400 transition-colors duration-300'>
+                  {data?.title}
+                </h3>
+                <p className='text-sm text-zinc-400 flex-grow leading-relaxed'>
                   {data?.description}
-                </div>
-                <div className='flex flex-row gap-x-3'>
-                  {data?.badge?.map((badge) => (
-                    <div
-                      className={`flex justify-center items-center border
-border-opacity-35 ${data.border}  rounded-2xl text-xs font-semibold w-24 h-8`}
+                </p>
+
+                {/* Badges */}
+                <div className='flex flex-wrap gap-2 pt-3 border-t border-white/5'>
+                  {data?.badge?.map((badge, i) => (
+                    <span
+                      key={i}
+                      className='text-xs font-medium px-3 py-1.5 rounded-full bg-white/5 text-zinc-300 border border-white/5'
                     >
                       {badge}
-                    </div>
+                    </span>
                   ))}
                 </div>
 
-                <div className='flex gap-4'>
-                  {data?.icons.map((icons) => (
+                {/* Icons */}
+                <div className='flex gap-3 mt-2'>
+                  {data?.icons.map((icon, i) => (
                     <img
-                      src={icons}
-                      className='w-8 h-8'
+                      key={i}
+                      src={icon}
+                      className='w-7 h-7 opacity-50 group-hover:opacity-100 transition-all duration-300'
+                      alt='tech'
                     />
                   ))}
                 </div>
               </div>
-            </a>
-          ))}
-        </div>
-      </section>
-    </>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
   );
 }
 
-export default index;
+export default Projects;

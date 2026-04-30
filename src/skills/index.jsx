@@ -1,5 +1,5 @@
 import Javascript from '../assets/images/javascript.png';
-import React from '../assets/images/react.png';
+import ReactImg from '../assets/images/react.png';
 import Node from '../assets/images/node.png';
 import Tailwind from '../assets/images/tailwind.png';
 import Mysql from '../assets/images/mysql.png';
@@ -10,77 +10,61 @@ import Typescript from '../assets/images/typescript.png';
 import Figma from '../assets/images/figma.png';
 import Nextjs from '../assets/images/nextjs.png';
 import Blender from '../assets/images/blender.png';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
-function index() {
+function Skills() {
+  const [titleRef, titleVisible] = useScrollReveal();
+  const [gridRef, gridVisible] = useScrollReveal({ threshold: 0.1 });
+
   const icons = [
-    {
-      icon: Javascript,
-      alignment: 'md:mt-0',
-    },
-    {
-      icon: React,
-      alignment: 'md:mt-12',
-    },
-    {
-      icon: Node,
-      alignment: 'md:mt-24',
-    },
-    {
-      icon: Tailwind,
-      alignment: 'md:mt-36',
-    },
-    {
-      icon: Mysql,
-      alignment: 'md:mt-0',
-    },
-    {
-      icon: Mongo,
-      alignment: 'md:mt-12',
-    },
-    {
-      icon: Express,
-      alignment: 'md:mt-24',
-    },
-    {
-      icon: Github,
-      alignment: 'md:mt-36',
-    },
-    {
-      icon: Figma,
-      alignment: 'md:mt-0',
-    },
-    {
-      icon: Typescript,
-      alignment: 'md:mt-12',
-    },
-    {
-      icon: Blender,
-      alignment: 'md:mt-24',
-    },
-    {
-      icon: Nextjs,
-      alignment: 'md:mt-36',
-    },
+    { icon: Javascript, label: 'JavaScript' },
+    { icon: ReactImg, label: 'React' },
+    { icon: Node, label: 'Node.js' },
+    { icon: Tailwind, label: 'Tailwind' },
+    { icon: Mysql, label: 'MySQL' },
+    { icon: Mongo, label: 'MongoDB' },
+    { icon: Express, label: 'Express' },
+    { icon: Github, label: 'GitHub' },
+    { icon: Figma, label: 'Figma' },
+    { icon: Typescript, label: 'TypeScript' },
+    { icon: Blender, label: 'Blender' },
+    { icon: Nextjs, label: 'Next.js' },
   ];
+
   return (
-    <section className='bg-black text-white mx-auto  space-y-32 py-8 md:py-12 lg:py-20 '>
-      <div class='mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center my'>
-        <h2 class='font-bold text-3xl leading-[1.1] sm:text-3xl md:text-4xl z-10'>
+    <section className='py-20 md:py-28 lg:py-36 px-6 md:px-16'>
+      <div
+        ref={titleRef}
+        className={`mx-auto flex max-w-3xl flex-col items-center space-y-4 text-center mb-16 reveal-fade-up ${titleVisible ? 'visible' : ''}`}
+      >
+        <span className='text-teal-400 text-sm uppercase tracking-[0.3em] font-semibold'>Tech Stack</span>
+        <h2 className='font-bold text-3xl sm:text-4xl md:text-5xl'>
           Technical Skills
         </h2>
-
-        <p class='max-w-[85%] text-zinc-400  sm:text-lg z-10'>
+        <p className='max-w-[85%] text-zinc-400 sm:text-lg'>
           Technologies and tools I work with
         </p>
       </div>
 
-      <div className='mx-auto grid justify-items-center  gap-y-10 md:gap-0  grid-cols-3  md:max-w-[70rem]  md:grid-cols-4'>
-        {icons.map((icons, key) => (
+      <div
+        ref={gridRef}
+        className='mx-auto grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 max-w-4xl'
+      >
+        {icons.map((item, key) => (
           <div
             key={key}
-            className={`w-10 sm:w-14 mt-0 ${icons.alignment} h-10 sm:h-14`}
+            className={`group flex flex-col items-center gap-3 p-5 rounded-2xl glass-card cursor-pointer transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_15px_40px_rgba(0,0,0,0.3)] reveal-scale stagger-${(key % 6) + 1} ${gridVisible ? 'visible' : ''}`}
           >
-            <img src={icons.icon} />
+            <div className='w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-transform duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_12px_rgba(20,184,166,0.4)]'>
+              <img
+                src={item.icon}
+                alt={item.label}
+                className='w-full h-full object-contain'
+              />
+            </div>
+            <span className='text-[10px] sm:text-xs font-medium text-zinc-500 group-hover:text-white transition-colors duration-300 text-center'>
+              {item.label}
+            </span>
           </div>
         ))}
       </div>
@@ -88,4 +72,4 @@ function index() {
   );
 }
 
-export default index;
+export default Skills;
