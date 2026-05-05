@@ -6,7 +6,7 @@ function AnimatedVectors() {
   return (
     <div className='animated-vectors'>
       {/* ===== FLOATING TRIANGLES ===== */}
-      <svg className='vector vector-tri-1' viewBox='0 0 100 100' fill='none'>
+      <svg className='vector vector-tri-1 ' viewBox='0 0 100 100' fill='none'>
         <polygon
           points='50,5 95,95 5,95'
           stroke='rgba(20,184,166,0.15)'
