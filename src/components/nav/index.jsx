@@ -145,8 +145,8 @@ function Navbar() {
           {/* Download Resume — pinned to bottom */}
           <div className='mt-auto px-8 pb-10'>
             <a
-              href='https://raw.githubusercontent.com/RKIT-SOLUTIONS/myportfolio/main/public/Ruckshanth%20CV.pdf'
-              download='Ruckshanth CV.pdf'
+              href='https://raw.githubusercontent.com/RKIT-SOLUTIONS/myportfolio/main/public/RuckResume.pdf'
+              download='RuckResume.pdf'
               className='block'
               onClick={closeMenu}
             >
