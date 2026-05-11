@@ -76,8 +76,8 @@ function Navbar() {
           <div className='hidden lg:flex items-center gap-6'>
             <IconsPalate />
             <a
-              href='https://raw.githubusercontent.com/RKIT-SOLUTIONS/myportfolio/main/public/Ruckshanth%20CV.pdf'
-              download='Ruckshanth CV.pdf'
+              href='https://raw.githubusercontent.com/RKIT-SOLUTIONS/myportfolio/main/public/RuckResume.pdf'
+              download='RuckResume.pdf'
             >
               <button className='glow-btn px-6 py-2.5 rounded-full font-semibold text-sm bg-gradient-to-r from-teal-500 to-blue-600 text-white hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] transition-all duration-300 transform hover:-translate-y-0.5'>
                 Download Resume
